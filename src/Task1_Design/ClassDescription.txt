@@ -1,0 +1,27 @@
+Class Diagram Description
+
+I have created 9 classes to run this game.
+
+The PlayGame class is the entry point, handling game initialization.
+It manages the game loop, user interaction, game selection (Bulls & Cows or Wordle),
+and the overall game flow. It also handles result logging and saving to a file.
+
+The Game class defines shared methods and structure for all games.
+It includes the core logic to compare player guesses with secret codes.
+
+AI is a subclass of Game, this class provides the base logic for Bulls & Cows players.
+It includes methods to generate secret codes, make guesses, and track guess history.
+
+EasyAI, MediumAI, HardAI:
+Subclasses of AI that implement different difficulty levels for the Bulls & Cows game.
+These can override methods providing additional logic and attributes unique to their specific game mode.
+
+The Player class represents the human player.
+Handles input such as secret codes and guesses for both Bulls & Cows and Wordle games.
+
+Wordle is a subclass of Game.
+It loads and validates a dictionary of words, ensures each word is five letters with no duplicates,
+and randomly selects a target word.
+
+InputHandler is a utility class responsible for validating and processing user input from the console.
+It ensures that inputs are within expected formats or ranges, code readability and user input handling.
